@@ -5,8 +5,13 @@
  */
 package controller;
 
+import domain.User;
+import domain.UserManager;
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,30 +20,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Jeroen
  */
 @Controller
+@RequestMapping("/logIn.htm")
 public class LogInController {
+    
+    @Autowired
+    private UserManager userManager;
 
     @RequestMapping(method = RequestMethod.GET)
     public String showFormPage(Model model) {
+        User u = new User();
+        u.setPassword("");
+        u.setUsername("");
+        model.addAttribute("user", u);
         return "logInForm";
     }
 
-//        @RequestMapping(method = RequestMethod.GET)
-//    public String showFormPage(Model model) {
-//        Price price = new Price();
-//        price.setPercentDecrease(20);
-//        price.setPercentIncrease(10);
-//        model.addAttribute("price", price);
-//        return "priceChange";
-//    }
-//    @RequestMapping(method = RequestMethod.POST)
-//    public String processRegistration(@Valid Price price, BindingResult result) {
-//        percentageValidator.validate(price, result);
-//        if (result.hasErrors()) {
-//            return "priceChange";
-//        } else {
-//            productManager.increasePrice(price.getPercentIncrease());
-//            productManager.decreasePrice(price.getPercentDecrease());
-//            return "redirect:/inventory.htm";
-//        }
-//    }
+    @RequestMapping(method = RequestMethod.POST)
+    public String processRegistration(@Valid User user, BindingResult result) {
+       
+        if (result.hasErrors()) {
+            return "logInForm";
+        } else {
+
+            return "overviewView";
+            //return "redirect:/inventory.htm";
+        }
+    }
 }

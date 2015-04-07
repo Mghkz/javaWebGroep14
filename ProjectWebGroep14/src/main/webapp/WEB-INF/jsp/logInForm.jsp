@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix = "form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form:form method="POST" action="logIn.htm" modelAttribute="user">
+            <p> <label>Username:</label>
+                <form:input path="username"/>&nbsp;
+                <form:errors path="username" cssClass="error"/>
+            </p>
+            <p> <label>Password:</label>
+                <form:input path="password"/>&nbsp;
+                <form:errors path="password" cssClass="error"/>
+            </p>
+            <input type="submit" value="OK">
+        </form:form>
     </body>
 </html>
