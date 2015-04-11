@@ -42,8 +42,8 @@ public class LogInController {
             return "logInForm";
         } else {
 
-            return "overviewView";
-            //return "redirect:/inventory.htm";
+//            return "overviewView";
+            return "redirect:/klas.htm";
         }
     }
 }

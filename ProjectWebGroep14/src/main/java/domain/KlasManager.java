@@ -11,8 +11,7 @@ import java.util.List;
  *
  * @author Jeroen
  */
-public interface  UserManager {
-
-    public List<User> getItems();
-
+public interface KlasManager {
+        public List<Klas> getItems();
+        public Leerling getLeerling(int id);
 }

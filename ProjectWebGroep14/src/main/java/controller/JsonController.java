@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package controller;
 
-import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  *
  * @author Jeroen
  */
-public interface  UserManager {
-
-    public List<User> getItems();
-
+@Controller
+@RequestMapping("/json.htm")
+public class JsonController {
+    
 }

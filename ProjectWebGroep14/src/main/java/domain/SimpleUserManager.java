@@ -26,7 +26,7 @@ public class SimpleUserManager implements UserManager{
 
     
     @Override
-    public List<User> getUsers() {
+    public List<User> getItems() {
         return users;
     }
 
