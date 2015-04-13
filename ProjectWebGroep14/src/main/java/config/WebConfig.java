@@ -51,19 +51,19 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         //Aanmaken Testen
         //Klas 1
         //Toetsen van Leerling 1
-        Toets[] toetsenL1 = {new Toets(20, 13), new Toets(20, 15), new Toets(10, 7)};
+        Toets[] toetsenL1 = {new Toets("Toets 1", 20, 13), new Toets("Toets 2", 20, 15), new Toets("Toets 3", 10, 7)};
         //Toetsen van Leerling 2
-        Toets[] toetsenL2 = {new Toets(20, 11), new Toets(20, 10), new Toets(10, 6)};
+        Toets[] toetsenL2 = {new Toets("Toets 1", 20, 11), new Toets("Toets 2", 20, 10), new Toets("Toets 3", 10, 6)};
         //Toetsen van Leerling 3
-        Toets[] toetsenL3 = {new Toets(20, 15), new Toets(20, 16), new Toets(10, 8)};
+        Toets[] toetsenL3 = {new Toets("Toets 1", 20, 15), new Toets("Toets 2", 20, 16), new Toets("Toets 3", 10, 8)};
 
         //Klas 2
         //Toetsen van Leerling 4
-        Toets[] toetsenL4 = {new Toets(20, 14), new Toets(20, 14), new Toets(10, 5)};
+        Toets[] toetsenL4 = {new Toets("Toets 1", 20, 14), new Toets("Toets 2", 20, 14), new Toets("Toets 3", 10, 5)};
         //Toetsen van Leerling 5
-        Toets[] toetsenL5 = {new Toets(20, 16), new Toets(20, 13), new Toets(10, 6)};
+        Toets[] toetsenL5 = {new Toets("Toets 1", 20, 16), new Toets("Toets 2", 20, 13), new Toets("Toets 3", 10, 6)};
         //Toetsen van Leerling 6
-        Toets[] toetsenL6 = {new Toets(20, 11), new Toets(20, 9), new Toets(10, 4)};
+        Toets[] toetsenL6 = {new Toets("Toets 1", 20, 11), new Toets("Toets 2", 20, 9), new Toets("Toets 3", 10, 4)};
 
         //Aanmaken Leerlingen
         Leerling l1 = new Leerling(1, "Lodewijk", "Schuurs");
@@ -86,8 +86,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
         //Aanmaken Klassen
         Klas k1 = new Klas("1ATa");
+//        k1.addToets(new Toets("Toets 1", 20));
+//        k1.addToets(new Toets("Toets 2", 20));
+//        k1.addToets(new Toets("Toets 3", 10));
         k1.setLeerlingen(Arrays.asList(leerlingenKlas1));
+
         Klas k2 = new Klas("1ATb");
+//        k2.addToets(new Toets("Toets 1", 20));
+//        k2.addToets(new Toets("Toets 2", 20));
+//        k2.addToets(new Toets("Toets 3", 10));
         k2.setLeerlingen(Arrays.asList(leerlingenKlas2));
 
         klassen.add(k1);

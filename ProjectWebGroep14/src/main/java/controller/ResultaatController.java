@@ -7,7 +7,6 @@ package controller;
 
 import domain.KlasManager;
 import domain.Leerling;
-import domain.Resultaat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,8 +29,7 @@ public class ResultaatController {
     public String doGet(@RequestParam("leerlingId") int id, Model model) {
 
         Leerling l = klasManager.getLeerling(id);
-        Resultaat r = new Resultaat(l);
-        model.addAttribute("resultaat", r);
+        model.addAttribute("leerling", l);
         return "resultaatView";
     }
 }
