@@ -86,17 +86,20 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
         //Aanmaken Klassen
         Klas k1 = new Klas("1ATa");
-//        k1.addToets(new Toets("Toets 1", 20));
-//        k1.addToets(new Toets("Toets 2", 20));
-//        k1.addToets(new Toets("Toets 3", 10));
+        k1.addToets(new Toets("Toets 1", 20));
+        k1.addToets(new Toets("Toets 2", 20));
+        k1.addToets(new Toets("Toets 3", 10));
         k1.setLeerlingen(Arrays.asList(leerlingenKlas1));
 
         Klas k2 = new Klas("1ATb");
-//        k2.addToets(new Toets("Toets 1", 20));
-//        k2.addToets(new Toets("Toets 2", 20));
-//        k2.addToets(new Toets("Toets 3", 10));
+        k2.addToets(new Toets("Toets 1", 20));
+        k2.addToets(new Toets("Toets 2", 20));
+        k2.addToets(new Toets("Toets 3", 10));
         k2.setLeerlingen(Arrays.asList(leerlingenKlas2));
 
+        k1.update();
+        k2.update();
+        
         klassen.add(k1);
         klassen.add(k2);
 

@@ -47,7 +47,7 @@ public class Leerling {
         toetsen.forEach(t -> {
             gemiddelde += (t.getBehaald() / t.getTotaal());
         });
-        gemiddelde = (gemiddelde / toetsen.size()) * 10;
+        gemiddelde = (gemiddelde / toetsen.size());
 
     }
 

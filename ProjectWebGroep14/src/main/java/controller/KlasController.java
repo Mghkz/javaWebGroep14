@@ -5,6 +5,7 @@
  */
 package controller;
 
+import domain.Klas;
 import domain.KlasManager;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +28,7 @@ public class KlasController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String doGet(Model model) {
-        List<String> klassen = klasManager.getItems().stream().map(k -> k.getNaam()).collect(Collectors.toList());
+        List<Klas> klassen = klasManager.getItems();
         model.addAttribute("klassen", klassen);
         return "klasOverview";
 
