@@ -40,7 +40,7 @@ public class LeerlingController {
             model.addAttribute("leerlingen", leerlingen);
             return "leerlingOverview";
         } else {
-            return "redirect:/klas.htm";
+            return "redirect:/klas";
         }
 
     }
