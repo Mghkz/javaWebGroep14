@@ -23,7 +23,7 @@
         ${leerling.max.naam}:<br>
         ${leerling.max.behaald} / ${leerling.max.totaal}
         <h3>Gemiddelde</h3>
-        <fmt:formatNumber value="${leerling.gemiddelde}" type="percent" maxFractionDigits="2"/> / 10
+        <fmt:formatNumber value="${leerling.gemiddelde}" type="percent" maxFractionDigits="2"/>
 
         <h3>Alle Toetsen</h3>
         <c:forEach items="${leerling.toetsen}" var="toets">
