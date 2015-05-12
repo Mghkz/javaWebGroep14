@@ -23,7 +23,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan("controller")
-@Import({ SecurityConfig.class })
+@Import({ SecurityConfig.class ,PersistenceJPAConfig.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean

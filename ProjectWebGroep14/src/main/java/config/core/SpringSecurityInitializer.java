@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package config;
+package config.core;
 
 /**
  *
@@ -12,9 +12,5 @@ package config;
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
 public class SpringSecurityInitializer extends AbstractSecurityWebApplicationInitializer {
-
-    public SpringSecurityInitializer() {
-        super(SecurityConfig.class);
-    }
 
 }
